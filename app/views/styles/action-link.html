@@ -2,6 +2,7 @@
 {% set navigation = 'transactional' %}
 {% set navigationWidth = 'fluid' %}
 {% from 'components/action-link/macro.njk' import actionLink %}
+{% from "macros/navigation.html" import pageNavigation %}
 {% extends "includes/templates/styles.html"%}
 
 {% block header %}
@@ -11,15 +12,7 @@
 
 {% block sidebar %}
     <h2 class="nhsuk-heading-xs">Page contents</h2>
-    <ul>
-		<li><a href="#current-design">What was being used</a></li>
-      <li><a href="#previous-research">Previous research</a></li>
-      <li><a href="#user-need">User need</a></li>
-      <li><a href="#our-designs">Design and research</a></li>
-      <li><a href="#code">Example and code snippet</a></li>
-      <li><a href="#accessibility">Accessiblity</a></li>
-      <li><a href="#usage">Usage (rules)</a></li>
-    </ul>
+    {% include 'partials/page-navigation.html' %}
 {% endblock %}
 
 {% block content %}

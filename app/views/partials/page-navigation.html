@@ -1,0 +1,19 @@
+{% set pageLinks = [
+    {
+      'url'  : '#current-design',
+      'label' : 'What was being used'
+    },
+    {
+      'url'  : '#',
+      'label' : 'Example 2'
+    },
+    {
+      'url'  : '#',
+      'label' : 'Example 3'
+    }
+  ]
+%}
+
+<ul>
+  {{ pageNavigation(pageLinks) }}
+</ul>
